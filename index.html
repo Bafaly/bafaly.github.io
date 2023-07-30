@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My page</title>
+</head>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap'); 
+
+    html {
+        font-family: 'Playfair Display', serif;
+    }
+
+    body {
+        margin: 0;
+        font-size: 16px;
+        padding-bottom: 24px;
+    }
+
+    * {
+        box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    h1, h2, body, a {
+        font-size: 16px;
+        font-weight: 500;
+        margin: 0;
+        color: #000000;
+    }
+
+    .main {
+        padding: 24px;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    li:not(:last-child) {
+        margin-bottom: 16px;
+    }
+
+    .about {
+        margin-bottom: 24px;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .gallery {
+        margin: 116px 24px 0;
+        display: grid;
+        grid-column-gap: 24px;
+        grid-row-gap: 32px;
+        grid-template:
+            "."
+            "." / 1fr 1fr 1fr 1fr;
+        align-content: space-around;
+        justify-content: space-around;
+        align-items: stretch;
+        justify-items: stretch;
+
+    }
+
+    .gallery .photo img {
+        display: block;
+        width: 100%;
+        max-width: 100%; 
+    }
+
+    .gallery .photo span {
+        margin-bottom: 8px;
+        display: block;
+    }
+
+    @media (max-width: 768px) {
+        .gallery {
+            grid-template:
+            "."
+            "." / 1fr 1fr 1fr;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .gallery {
+            grid-template:
+            "."
+            "." / 1fr 1fr;
+        }
+    }
+
+    @media (max-width: 400px) {
+        .gallery {
+            grid-template:
+            "."
+            "." / 1fr;
+        }
+    }
+    
+
+</style>
+<body>
+    <div class="main">
+      <div class="about">
+        <h1>Hello, my name is Olena.</h1>
+        <h2>I like to take photos and play sims, currently based in Lviv, Ukraine.</h2>  
+      </div>  
+      <ul class="links">
+        <li><a target="_blank" href="https://www.instagram.com/_bafaly/">Instagram</a></li>
+        <li><a target="_blank" href="https://www.deviantart.com/monogatory">DevianArt</a></li>
+        <li><a target="_blank" href="https://twitter.com/_bafaly_">Twitter</a></li>
+      </ul>
+    </div>
+
+    <div class="gallery">
+        <div class="photo"><span>Lviv - Apr 9, 2023</span><img src="imgs\photo_2023-07-14_15-32-15.jpg" alt=""></div>
+        <div class="photo"><span>Lviv - Apr 23, 2023</span><img src="imgs\photo_2023-07-22_20-12-13.jpg" alt=""></div>
+        <div class="photo"><span>Lviv - Mar 23, 2023</span><img src="imgs\photo_2023-01-25_13-38-16.jpg" alt=""></div>
+        <div class="photo"><span>Lviv - Mar 23, 2023</span><img src="imgs\photo_2023-07-22_20-12-30.jpg" alt=""></div>
+        <div class="photo"><span>Lviv - Mar 23, 2023</span><img src="imgs\photo_2023-07-22_20-12-29 (2).jpg" alt=""></div>
+        <div class="photo"><span>Lviv - Mar 23, 2023</span><img src="imgs\photo_2023-07-22_20-12-27 (2).jpg" alt=""></div>
+        <div class="photo"><span>Lviv - Apr 23, 2023</span><img src="imgs\photo_2023-07-22_20-12-15.jpg" alt=""></div>
+        <div class="photo"><span>Seville - Aug 11, 2022</span><img src="imgs\photo_2023-07-22_20-12-18 (2).jpg" alt=""></div>
+        <div class="photo"><span>Seville - Aug 11, 2022</span><img src="imgs\photo_2023-07-22_20-12-27.jpg" alt=""></div>
+        <div class="photo"><span>Seville - Aug 11, 2022</span><img src="imgs\photo_2023-01-25_13-23-30.jpg" alt=""></div>
+        <div class="photo"><span>Lviv - Apr 16, 2023</span><img src="imgs\photo_2023-07-22_20-12-10.jpg" alt=""></div>
+        <div class="photo"><span>Lviv - Dec 18, 2022</span><img src="imgs\photo_2023-07-22_20-12-29.jpg" alt=""></div>
+        <div class="photo"><span>Malaga - Aug 15, 2022</span><img src="imgs\photo_2023-07-22_20-12-17 (2).jpg" alt=""></div>
+        <div class="photo"><span>Malaga - Aug 15, 2023</span><img src="imgs\photo_2023-07-22_20-12-18.jpg" alt=""></div>
+        <div class="photo"><span>Malaga - Aug 15, 2023</span><img src="imgs\photo_2023-07-22_20-12-53.jpg" alt=""></div>
+        <div class="photo"><span>Malaga - Aug 19, 2023</span><img src="imgs\photo_2023-07-22_20-12-28.jpg" alt=""></div>
+    </div>
+    <script src="lib\medium-zoom.min.js"></script>
+    <script>
+        mediumZoom('.gallery img')
+    </script>
+</body>
+</html>
